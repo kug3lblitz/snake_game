@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body, html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #000000 url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/188512/bg-pattern.png") repeat;
+  font-family: "Press Start 2P";
+  font-size: 12pt; }
+  body #container {
+    margin: -1px auto;
+    border: #003300 1px solid;
+    box-shadow: 0px 0px 20px black;
+    width: 451px; }
+    body #container canvas {
+      display: block; }
+  body span.font-trick {
+    /* De font-family op de body en in deze span zorgen ervoor dat de font vóór de canvas geladen wordt. */
+    font-family: "Press Start 2P";
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; }
+
+/*# sourceMappingURL=main.css.map */

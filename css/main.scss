@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+$line-color: #003300;
+$back-color: #000000;
+$cells:      30;
+$cell-size:  15px;
+$width:      ($cells * $cell-size) + 1px;
+
+body {
+  background: $back-color url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/188512/bg-pattern.png") repeat;
+
+  font-family: "Press Start 2P";
+  font-size: 12pt;
+
+  #container {
+    margin: -1px auto;
+    border: $line-color 1px solid;
+    box-shadow: 0px 0px 20px black;
+    width: $width;
+
+    canvas {
+      display: block;
+    }
+  }
+
+  span {  
+    &.font-trick {
+      /* De font-family op de body en in deze span zorgen ervoor dat de font vóór de canvas geladen wordt. */
+      font-family: "Press Start 2P";
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+}  
