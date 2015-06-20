@@ -1294,7 +1294,7 @@
     }
 
     // some message models and views
-    this.winOrDieMessage     = new MessageModel("You die!");
+    this.winOrDieMessage     = new MessageModel("YOU DIED");
     this.winOrDieMessageView = new MessageView(this.winOrDieMessage, modLevel, this.renderTarget.context);
     this.pausedMessage       = new MessageModel("Start Game.", "Press any key to start.");
     this.pausedMessageView   = new MessageView(this.pausedMessage, modLevel, this.renderTarget.context);
@@ -1382,9 +1382,9 @@
             if(that.controllers[i] instanceof SnakeController) {
               if(that.controllers[i].isDestroyed()) {
                 if(that.controllers[i].modSnake.cause === "obesity") {
-                  that.winOrDieMessage.message1 = "You win, you ate all the food and died by obesity!";
+                  that.winOrDieMessage.message1 = "YOU WIN, BUT YOU STILL DIED FATTY!";
                 } else {
-                  that.winOrDieMessage.message1 = "You die, you touched " + (that.controllers[i].modSnake.cause === "snake" ? "the tail" : "a wall") + "!";
+                  that.winOrDieMessage.message1 = "YOU DIED, you got owned by " + (that.controllers[i].modSnake.cause === "snake" ? "eating yourself" : "a wall") + "!";
                 }
                 that.waitKey = true;
                 that.modAudio.pause();
